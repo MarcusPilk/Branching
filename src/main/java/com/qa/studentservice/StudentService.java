@@ -4,13 +4,14 @@ import com.qa.students.Student;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class StudentService {
     private Map<Integer,Student> studentMap;
-    private static int counter = 1;
+    private int counter = 1;
 
     public StudentService() {
-        studentMap = new HashMap<Integer, Student>();
+        studentMap = new HashMap<>();
     }
 
     public void addStudentToMap(Student studentToAdd){
@@ -20,5 +21,13 @@ public class StudentService {
 
     public Map<Integer, Student> getStudentMap() {
         return studentMap;
+    }
+
+    public Set<Integer> getKeySet(){
+        return studentMap.keySet();
+    }
+
+    public Student getStudentUsingKey(int key){
+        return studentMap.get(key);
     }
 }
