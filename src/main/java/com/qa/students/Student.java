@@ -3,10 +3,12 @@ package com.qa.students;
 public class Student {
     private String firstName;
     private String lastName;
+    private int accountNumber;
 
-    public Student(String firstName, String lastName) {
+    public Student(String firstName, String lastName, int accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.accountNumber = accountNumber;
     }
 
     public String getFirstName() {
@@ -23,5 +25,13 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
     }
 }
