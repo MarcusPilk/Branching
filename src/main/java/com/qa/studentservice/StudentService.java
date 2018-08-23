@@ -19,12 +19,12 @@ public class StudentService {
         counter++;
     }
 
-    public Map<Integer, Student> getStudentMap() {
-        return studentMap;
-    }
-
     public Set<Integer> getKeySet(){
         return studentMap.keySet();
+    }
+
+    public Map<Integer, Student> getStudentMap() {
+        return studentMap;
     }
 
     public Student getStudentUsingKey(int key){

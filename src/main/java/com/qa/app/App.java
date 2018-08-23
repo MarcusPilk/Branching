@@ -1,5 +1,8 @@
 package com.qa.app;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.qa.jsonConverter.ConvertToJson;
 import com.qa.students.Student;
         import com.qa.studentservice.StudentService;
 
@@ -17,8 +20,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        for (int entry : app.studentService.getKeySet()) {
-            System.out.println(app.studentService.getStudentUsingKey(entry));
-        }
+        System.out.println(ConvertToJson.toJson(app.studentService.getStudentMap()));
+
     }
 }
