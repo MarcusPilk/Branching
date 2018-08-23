@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class StudentService {
     private Map<Integer,Student> studentMap;
-    private static int counter = 1;
+    private int counter = 1;
 
     public StudentService() {
         studentMap = new HashMap<>();
