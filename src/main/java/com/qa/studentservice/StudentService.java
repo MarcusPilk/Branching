@@ -10,7 +10,7 @@ public class StudentService {
     private static int counter = 1;
 
     public StudentService() {
-        studentMap = new HashMap<Integer, Student>();
+        studentMap = new HashMap<>();
     }
 
     public void addStudentToMap(Student studentToAdd){
