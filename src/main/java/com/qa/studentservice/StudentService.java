@@ -12,8 +12,13 @@ public class StudentService {
     public StudentService() {
         studentMap = new HashMap<Integer, Student>();
     }
+
     public void addStudentToMap(Student studentToAdd){
         studentMap.put(counter,studentToAdd);
         counter++;
+    }
+
+    public Map<Integer, Student> getStudentMap() {
+        return studentMap;
     }
 }
