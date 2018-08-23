@@ -1,3 +1,5 @@
+package com.qa.app;
+
 import com.qa.students.Student;
         import com.qa.studentservice.StudentService;
 
@@ -17,6 +19,6 @@ public class App {
 
 
     public static void main(String[] args) {
-        App app = new App();
+        new App();
     }
 }
