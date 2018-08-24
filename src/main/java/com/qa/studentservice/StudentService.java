@@ -2,6 +2,7 @@ package com.qa.studentservice;
 
 import com.qa.students.Student;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,4 +23,11 @@ public class StudentService {
         return studentMap;
     }
 
+    public int numberOfFirstName(String searchName) {
+        int counter = 0;
+        for (int key:studentMap.keySet()) {
+            if(studentMap.get(key).getFirstName().equals(searchName))counter++;
+        }
+        return counter;
+    }
 }
