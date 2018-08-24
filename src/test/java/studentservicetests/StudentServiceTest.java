@@ -28,7 +28,6 @@ public class StudentServiceTest {
 
     @Test
     public void numberOfFirstNameTest(){
-        int number = studentService.numberOfFirstName("Marcus");
-        assertEquals(3,number);
+        assertEquals(3,studentService.numberOfFirstName("Marcus"));
     }
 }

@@ -5,6 +5,8 @@ import com.qa.students.Student;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class StudentService {
     private Map<Integer,Student> studentMap;
@@ -23,11 +25,7 @@ public class StudentService {
         return studentMap;
     }
 
-    public int numberOfFirstName(String searchName) {
-        int counter = 0;
-        for (int key:studentMap.keySet()) {
-            if(studentMap.get(key).getFirstName().equals(searchName))counter++;
-        }
-        return counter;
+    public int numberOfFirstName(final String searchName) {
+        return studentMap.values().stream().filter(student -> searchName.equals(student.getFirstName())).collect(Collectors.counting()).intValue();
     }
 }
