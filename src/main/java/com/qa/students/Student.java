@@ -11,7 +11,7 @@ public class Student {
         this.accountNumber = accountNumber;
 
     }
-    
+
     @Override
     public String toString() {
         return "Student{" +
@@ -21,5 +21,7 @@ public class Student {
                 '}';
     }
 
-
+    public String getFirstName() {
+        return firstName;
+    }
 }

@@ -2,9 +2,11 @@ package com.qa.studentservice;
 
 import com.qa.students.Student;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class StudentService {
     private Map<Integer,Student> studentMap;
@@ -19,15 +21,11 @@ public class StudentService {
         counter++;
     }
 
-    public Set<Integer> getKeySet(){
-        return studentMap.keySet();
-    }
-
     public Map<Integer, Student> getStudentMap() {
         return studentMap;
     }
 
-    public Student getStudentUsingKey(int key){
-        return studentMap.get(key);
+    public int numberOfFirstName(final String searchName) {
+        return studentMap.values().stream().filter(student -> searchName.equals(student.getFirstName())).collect(Collectors.counting()).intValue();
     }
 }
